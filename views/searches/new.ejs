@@ -11,6 +11,18 @@
   </head>
 <body>
 
-
+  <form action="/searches/new" method="GET">
+    <label>
+      Search By Title
+      <input type="radio" name="filter" value="title" required>
+    </label>
+    <label>
+      Search By Author
+      <input type="radio" name="filter" value="author">
+    </label>
+      <input type="text" name="" placeholder="Enter search terms">
+    <button type="submit">Submit</button>
+  </form>
+  
 </body>
 </html>

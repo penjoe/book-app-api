@@ -19,7 +19,13 @@ app.use(express.urlencoded({extended: true}));
 // EJS setup
 app.set('view engine', 'ejs');
 
+//Functions to handle various routes to/from server
+
+
 // REST/CRUD http routes
+app.get('/searches/new', (req, res) => {
+  res.render('searches/new')
+});
 
 // test route
 app.get('/test', (req, res) => {
