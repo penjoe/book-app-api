@@ -11,7 +11,7 @@
   </head>
 <body>
 
-  <form action="/searches/new" method="GET">
+  <form action="/searches" method="POST">
     <label>
       Search By Title
       <input type="radio" name="filter" value="title" required>
@@ -20,7 +20,7 @@
       Search By Author
       <input type="radio" name="filter" value="author">
     </label>
-      <input type="text" name="" placeholder="Enter search terms">
+      <input type="text" name="bookQuery" placeholder="Enter search terms">
     <button type="submit">Submit</button>
   </form>
   
