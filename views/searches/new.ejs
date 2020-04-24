@@ -10,13 +10,19 @@
     <link rel="stylesheet" type="text/css" href="../../styles/modules.css"/>
   </head>
 <body>
-  <h1>Search Results</h1>
-  <% bookResults.forEach( book => { %>
-    <img src="<%= book.image_url %>">
-    <h3>Title: <%= book.title %> </h3>
-    <h3>Author: <%= book.author %> </h3>
-    <p> <%= book.description %> </p>
-    <p> <%= book.isbn %> </p>
-  <% }); %>
+
+  <form action="/searches" method="POST">
+    <label>
+      Search By Title
+      <input type="radio" name="filter" value="title" required>
+    </label>
+    <label>
+      Search By Author
+      <input type="radio" name="filter" value="author">
+    </label>
+      <input type="text" name="bookQuery" placeholder="Enter search terms">
+    <button type="submit">Submit</button>
+  </form>
+  
 </body>
 </html>

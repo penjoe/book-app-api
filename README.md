@@ -127,10 +127,25 @@ Project database info - see attached `book.sql` file.
     - Initial Repo created.
     - Initial tree/files added.
     - Installed dependencies. 
+    - Created basic server.js
     - Feature 01 Complete: Initial server.js file setup serving public files.
 * 1.1.0 20200423
-    - created branch for lab-11-homepage
-    - 
+    - Created branch for lab-11-homepage
+    - Setup basic index.ejs with some minimal css to show proof of life.
+    - Set PORT, started server listening for requests.
+* 1.2.0 20200423
+    - Created branch for lab-11-api-search.
+    - Tested index.ejs with a /test GET route.
+    - Created a new.ejs with a form for user to search with two options, author and title.
+    - Created new route for new.ejs.
+* 1.3.0 20200423
+    - Created function to handle request to Google Books API
+    - Created a constructor function to generate new book objects based on search results
+    - Map results from API search and run them through the constructor. 
+    - Rendered search results onto show.ejs via an ejs template.
+* 1.4.0 20200423
+    - Created new branch lab-11-handle-errors
+    - render a new view that all errors are redirected to
     
 ## License
 
@@ -160,24 +175,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 * Feature #1 Load Time: 
     - Estimate of time needed to complete: 60 mins
     - Start time: 2200 04/23/2020
-    - Finish time:       
-    - Actual time needed to complete: 
+    - Finish time: 2230 04/23/2020   
+    - Actual time needed to complete: 30 mins
 
 * Feature #2 Search API Form: 
-    - Estimate of time needed to complete:
-    - Start time: 
-    - Finish time:
-    - Actual time needed to complete:
+    - Estimate of time needed to complete: 60 mins
+    - Start time: 2245 04/23/2020
+    - Finish time: 2310 04/23/2020
+    - Actual time needed to complete: 25 mins
 
-* Feature #3 Browse Results: 
-    - Estimate of time needed to complete:
-    - Start time: 
-    - Finish time:  
-    - Actual time needed to complete:
+* Feature #3 Browse Results:
+    - Estimate of time needed to complete: 120 mins
+    - Start time: 2330 04/23/2020
+    - Finish time: 0155 04/24/2020
+    - Actual time needed to complete: 145 mins
 
-* Feature #4 Error Messages: 
-    - Estimate of time needed to complete:
-    - Start time:
+* Feature #4 Error Messages
+    - Estimate of time needed to complete: 15 mins
+    - Start time: 0200 04/24/2020
     - Finish time:
     - Actual time needed to complete: 
 
