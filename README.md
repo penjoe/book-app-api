@@ -146,6 +146,13 @@ Project database info - see attached `book.sql` file.
 * 1.4.0 20200423
     - Created new branch lab-11-handle-errors
     - render a new view that all errors are redirected to
+* 1.5.0 20200425
+    - Created new branch lab-11-responsive-css
+    - Used a pre-built template for CSS
+    - Added styling to provide improved front-end experience
+    - Added multiple media breakpoints for various device screen sizes
+    - Employed SMACSS for a modular, organized CSS structure
+1.6.0
     
 ## License
 
@@ -192,18 +199,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * Feature #4 Error Messages
     - Estimate of time needed to complete: 15 mins
-    - Start time: 0200 04/24/2020
-    - Finish time:
-    - Actual time needed to complete: 
+    - Start time: 1530 04/25/2020
+    - Finish time: 1545 04/25/2020 
+    - Actual time needed to complete: 15 mins
 
 * Feature #5 Deliver CSS: 
-    - Estimate of time needed to complete:
-    - Start time:
-    - Finish time: 
-    - Actual time needed to complete:
+    - Estimate of time needed to complete: 20 mins
+    - Start time: 1545 04/25/2020
+    - Finish time: 1600 04/25/2020
+    - Actual time needed to complete: 15 mins
     
 * Feature #6 Home Page: 
-    - Estimate of time needed to complet    - 
+    - Estimate of time needed to complete: 
     - Start time: 
     - Finish time:  
     - Actual time needed to complete:

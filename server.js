@@ -44,8 +44,12 @@ function handleBooks(req, res) {
     .then( bookResults => {
       res.render('./searches/show', {bookResults})
     })
-    .catch( error => {})
-  
+    .catch( error => errorHandler('Book Search Error', req, res));
+}
+
+// Function to handle all errors
+function errorHandler(error, req, res) {
+  res.render('./pages/error', {error});
 }
 
 // REST/CRUD http routes
@@ -55,12 +59,9 @@ app.get('/searches/new', (req, res) => {
   res.render('searches/new')
 });
 
-// test routes
+// test route
 app.get('/test', (req, res) => {
-  res.render('pages/index')
-});
-app.get('/searches/show', (req, res) => {
-  res.render('searches/show')
+  res.render('pages/error')
 });
 
 // Start server and listen for requests
