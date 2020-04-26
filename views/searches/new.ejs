@@ -9,20 +9,22 @@
     <link rel="stylesheet" type="text/css" href="../../styles/layout.css"/>
     <link rel="stylesheet" type="text/css" href="../../styles/modules.css"/>
   </head>
-<body>
+  <%- include('../layouts/header') %>
+  <body>
 
-  <form action="/searches" method="POST">
-    <label>
-      Search By Title
-      <input type="radio" name="filter" value="title" required>
-    </label>
-    <label>
-      Search By Author
-      <input type="radio" name="filter" value="author">
-    </label>
-      <input type="text" name="bookQuery" placeholder="Enter search terms">
-    <button type="submit">Submit</button>
-  </form>
-  
-</body>
+    <form action="/searches" method="POST">
+      <label>
+        Search By Title
+        <input type="radio" name="filter" value="title" required>
+      </label>
+      <label>
+        Search By Author
+        <input type="radio" name="filter" value="author">
+      </label>
+        <input type="text" name="bookQuery" placeholder="Enter search terms">
+      <button type="submit">Submit</button>
+    </form>
+    
+  </body>
+  <%- include('../layouts/footer') %>
 </html>
