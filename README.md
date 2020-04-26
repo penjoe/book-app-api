@@ -152,7 +152,9 @@ Project database info - see attached `book.sql` file.
     - Added styling to provide improved front-end experience
     - Added multiple media breakpoints for various device screen sizes
     - Employed SMACSS for a modular, organized CSS structure
-1.6.0
+    - Created a partial for each book so that when displayed, books will always look the same
+* 1.6.0 20200425
+    - Render home page at the root as soon as user loads page
     
 ## License
 
@@ -204,14 +206,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
     - Actual time needed to complete: 15 mins
 
 * Feature #5 Deliver CSS: 
-    - Estimate of time needed to complete: 20 mins
-    - Start time: 1545 04/25/2020
-    - Finish time: 1600 04/25/2020
-    - Actual time needed to complete: 15 mins
+    - Estimate of time needed to complete: 30 mins
+    - Start time: 1630 04/25/2020
+    - Finish time: 1705 04/25/2020
+    - Actual time needed to complete: 35 mins
     
 * Feature #6 Home Page: 
-    - Estimate of time needed to complete: 
-    - Start time: 
+    - Estimate of time needed to complete: 15 mins
+    - Start time: 1710 04/25/2020
     - Finish time:  
     - Actual time needed to complete:
 
