@@ -9,14 +9,14 @@
     <link rel="stylesheet" type="text/css" href="../../styles/layout.css"/>
     <link rel="stylesheet" type="text/css" href="../../styles/modules.css"/>
   </head>
-<body>
-  <h1>Search Results</h1>
-  <% bookResults.forEach( book => { %>
-    <img src="<%= book.image_url %>">
-    <h3>Title: <%= book.title %> </h3>
-    <h3>Author: <%= book.author %> </h3>
-    <p> <%= book.description %> </p>
-    <p> <%= book.isbn %> </p>
-  <% }); %>
-</body>
+  <body>
+
+    <h1>Search Results</h1>
+
+    <main class="book-container">
+      <% bookResults.forEach( book => { %>
+        <%- include('../partials/book-details', {book}) %>
+      <% }); %>
+    </main>
+  </body>
 </html>

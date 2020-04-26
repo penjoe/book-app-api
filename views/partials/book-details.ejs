@@ -1,0 +1,23 @@
+<article class="book-shelf">
+  <div class="book-sleeve">
+    <img src="<%= book.image_url %>" class="book-image">
+  </div>
+  <div class="book-info">
+    <h3>Title: <%= book.title %></h3>
+
+    <h3>Author: <%= book.author %></h3>
+
+    <div class="book-description">
+      <h4>Synopsis:</h4>
+      <p><%= book.description %></p>
+    </div>
+
+    <p> ISBN #: <%= book.isbn %> </p>
+
+    <p>Bookshelf: <%= book.bookshelf %></p>
+
+    <!-- <form action="/books" method="POST">
+      <button type="submit" name="saveData" value="<%= book.searchIndex %>">save to collection</button>
+    </form> -->
+  </div>
+</article> 

@@ -24,8 +24,8 @@ function Book(element) {
   this.title = element.volumeInfo.title ? element.volumeInfo.title : 'No Title Available';
   this.author = element.volumeInfo.authors ? element.volumeInfo.authors[0] : 'No Author Available';
   this. description = element.volumeInfo.description ? element.volumeInfo.description : 'No Description Available';
-  this.isbn = element.volumeInfo.industryIdentifiers ? element.volumeInfo.industryIdentifiers[0] : 'No ISBN Available';
-  this.bookshelf = element.bookshelf;
+  this.isbn = element.volumeInfo.industryIdentifiers ? element.volumeInfo.industryIdentifiers[0].identifier : 'No ISBN Available';
+  this.bookshelf = element.bookshelf ? element.bookshelf : 'No bookshelf selected';
   this.image_url = element.volumeInfo.imageLinks ? element.volumeInfo.imageLinks.thumbnail : `https://i.imgur.com/J5LVHEL.jpg`;
 }
 
