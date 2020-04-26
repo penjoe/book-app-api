@@ -15,7 +15,10 @@
   <h1>My Book Collection</h1>
 
   <main class="book-container">
-    
+    <h3> Total Books: <%= sqlResults.rowCount %>  </h3>
+    <% sqlResults.rows.forEach(book => { %>
+      <%- include('../partials/book-details', {book}) %>
+    <% }); %> 
   </main>
 
 </body>
