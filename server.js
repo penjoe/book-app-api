@@ -54,6 +54,9 @@ function errorHandler(error, req, res) {
 
 // REST/CRUD http routes
 app.use(cors());
+app.get('/', (req, res) => {
+  res.render('pages/index');
+})
 app.post('/searches', handleBooks);
 app.get('/searches/new', (req, res) => {
   res.render('searches/new')
