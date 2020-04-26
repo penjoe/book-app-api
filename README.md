@@ -157,6 +157,19 @@ Project database info - see attached `book.sql` file.
     - Render home page at the root as soon as user loads page
     - Created layout partials for header and footers and added them into each view
     - Header now has a nav with links to home and search form pages
+* 2.0.0 20200425
+    - Created branch lab-12-database-setup
+    - Setup .sql file.
+    - Connected to database and tested connection.
+* 2.1.0 20200425
+    - Created function that pulls all data from database and renders that data into an ejs template on the homepage
+    - Reworked GET route for homepage to include above function as a callback
+    - Added a total book count on the homepage indicating total # of books saved in database
+* 2.2.0 20200425
+    - Created branch lab-12-single-book
+    - Added button to all books displayed on the home page
+    - Button takes user to a new view with a single book displayed with all book details
+    - Reworked books displayed on homepage to only show limited info so that user needs to click to view all details
     
 ## License
 
@@ -173,7 +186,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Suggestion for a favicon:  
     [https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png](https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png)  
     
-### Time Hacks per Features
+## Time Hacks per Features
 
 #### Lab 011
 
@@ -221,13 +234,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 #### Lab 012
 * Feature #1 Save Books: 
-    - Estimate of time needed to complete:
-    - Start time:
-    - Finish time:
-    - Actual time needed to complete: 
+    - Estimate of time needed to complete: 120 mins
+    - Start time: 2125 04/25/2020
+    - Finish time: 2225 04/25/2020
+    - Actual time needed to complete: 100 mins
 * Feature #2 Single Book: 
-    - Estimate of time needed to complete:
-    - Start time:
+    - Estimate of time needed to complete: 120 mins
+    - Start time:  04/25/2020
     - Finish time: 
     - Actual time needed to complete: 
 * Feature #3 Add New Book:

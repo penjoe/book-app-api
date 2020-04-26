@@ -1,5 +1,9 @@
 'use strict'
 
+// Just for fun
+const chalk = require('chalk');
+const log = console.log;
+
 // Installed dependencies and libraries
 require('dotenv').config();
 const express = require('express');
@@ -10,6 +14,18 @@ const cors = require('cors');
 
 // server port
 const PORT = process.env.PORT || 3000;
+
+// Create new database instance
+const dbClient = new pg.Client(process.env.DATABASE_URL)
+
+// Create connection to database
+dbClient.connect( error => {
+  if ( error ) {
+    console.error('Connect To Database: Failed')
+  } else {
+    console.log('Connect To Database: Success')
+  }
+})
 
 // Create express instance
 const app = express();
@@ -44,7 +60,22 @@ function handleBooks(req, res) {
     .then( bookResults => {
       res.render('./searches/show', {bookResults})
     })
-    .catch( error => errorHandler('Book Search Error', req, res));
+    .catch( error => errorHandler('Error calling from API to get a list of 10 books', req, res));
+}
+
+// Function that pulls book info from the database and renders it on the homepage
+function renderDatabase(req, res) {
+  let fromSQL = `SELECT * FROM books;`;
+  
+  dbClient.query(fromSQL)
+    .then( sqlResults => {
+      if (sqlResults.rowCount === 0) {
+        res.render('./searches/new')
+      } else {
+        res.render('./pages/index', {sqlResults})
+      }
+    })
+    .catch( error => errorHandler('Error rendering from database to index.ejs', req, res));
 }
 
 // Function to handle all errors
@@ -54,9 +85,7 @@ function errorHandler(error, req, res) {
 
 // REST/CRUD http routes
 app.use(cors());
-app.get('/', (req, res) => {
-  res.render('pages/index');
-})
+app.get('/', renderDatabase)
 app.post('/searches', handleBooks);
 app.get('/searches/new', (req, res) => {
   res.render('searches/new')
@@ -67,7 +96,21 @@ app.get('/test', (req, res) => {
   res.render('pages/error')
 });
 
-// Start server and listen for requests
+
+// Start server and listen for requests... with a custom timestamp!
 app.listen( PORT, () => {
+  const today = new Date();
+  let dd = today.getDate();
+  if(dd < 10) dd = "0" + dd;
+  let mm = today.getMonth() + 1;
+  if(mm < 10) mm = "0" + mm;
+  const yyyy = today.getFullYear();
+  let hh = today.getHours();
+  if(hh < 10) hh = "0" + hh;
+  let ii = today.getMinutes();
+  if(ii < 10) ii = "0" + ii;
+  let ss = today.getSeconds();
+  if(ss < 10) ss = "0" + ss;
+  console.log(chalk.green("[nodemon]", `${yyyy}-${mm}-${dd} ${hh}:${ii}:${ss}`));
   console.log('Server is running on PORT ' + PORT)
-});
+})
